@@ -1,0 +1,342 @@
+/*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+/*
+      span: #d6d6d9 ;
+      background, icon, boder: #199cdb ;
+      Border: #F2F2F2 ; #d6c08d
+      font-color, icon of job-info: #6a6a6a ;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "fontello";
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6a6a6a;
+  width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  line-height: 1;
+  margin: 32px 0px;
+  font-size: 30px;
+}
+i {
+  color: #199cdb;
+}
+/* ẢNH BANNER */
+#banner {
+  position: relative;
+  background-image: linear-gradient(
+      rgba(20, 20, 20, 0.425),
+      rgba(20, 20, 20, 0.425)
+    ),
+    url(../images/banner.jpg);
+  height: 350px;
+  background-size: cover;
+}
+.banner-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  text-align: center;
+  color: #fff;
+  transform: translateX(-50%);
+}
+.banner-text h1 {
+  font-size: 36px;
+  margin: 0px;
+}
+.banner-text span {
+  font-size: 12px;
+}
+
+/* NAVBAR */
+#nav-bar .container {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative; /* Ảnh cá nhân .nav-bar-img được khai báo: position: absolute */
+}
+.container--box {
+  height: 65px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 32px;
+  border: 1px solid #f2f2f2;
+  border-right: none;
+}
+.container--box:last-child {
+  border-right: 1px solid #f2f2f2;
+}
+.container--name {
+  display: inline-block;
+  padding: 0 64px;
+}
+.container--box a {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  color: #6a6a6a;
+}
+.nav-bar--icon {
+  width: 23px;
+  height: 23px;
+}
+.container--name p {
+  font-size: 24px;
+}
+.container--name span {
+  color: #d6d6d9;
+  font-size: 12px;
+}
+
+/* ABOUT */
+#about .container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 80px;
+  padding-bottom: 0px;
+}
+#target,
+#personal-info {
+  padding: 24px 16px;
+}
+#target h1,
+#personal-info h1 {
+  margin-top: 0px;
+}
+.mt-40 {
+  list-style: none;
+}
+.mt-40 li {
+  margin-bottom: 4px;
+}
+.mt-40 li span {
+  font-weight: bold;
+}
+.personal-info--icon {
+  margin: 24px 0px 16px;
+}
+
+/* JOB-INFO */
+#job-info .container {
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  gap: 12px;
+  justify-content: space-between;
+}
+.container--item {
+  border: 1px solid #f2f2f2;
+
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto 1fr;
+}
+.container--item--text {
+  grid-column: 1/-1;
+}
+.container--item h1 {
+  text-align: center;
+}
+.container--item--icon {
+  text-align: center;
+  align-self: center;
+  color: #6a6a6a;
+  font-size: 40px;
+}
+.current {
+  display: inline-block;
+  padding: 2px 12px;
+  background-color: #199cdb;
+  border-radius: 5px;
+  color: #fff;
+}
+.container--item--text {
+  padding: 24px 16px 24px 48px;
+}
+.container--item--text ul div:nth-child(3) {
+  margin-top: 24px;
+}
+/* Dấu chấm timeline */
+.container--item--text ul {
+  list-style-type: none;
+}
+.container--item--text ul li {
+  position: relative;
+  content: "";
+  padding-bottom: 0px;
+  height: 100%;
+  margin: 0px;
+}
+.container--item--text ul li::after {
+  position: absolute;
+  content: "";
+  background-color: #199cdb;
+  border: 5px solid #199cdb;
+  border-radius: 50%;
+  left: -25px;
+  top: 5px;
+  height: 4px;
+  width: 4px;
+}
+/* JOB-INFO  Sở thích chi tiết */
+.illusion {
+  padding: 24px 16px;
+
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: 30% 1fr; /* tai sao khi dat gia tri auto auto thi khoang khong gian bi keo gian? */
+  justify-items: center;
+  gap: 4px;
+}
+.hobby-icon {
+  font-size: 20px;
+  border: 1px solid #199cdb;
+  border-radius: 50%;
+
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+}
+/* JOB-INFO Ngôn ngữ, kỹ năng chi tiết */
+.details {
+  padding: 24px 16px;
+}
+.level {
+  display: inline-block;
+  background-color: #f2f2f2;
+  height: 2px;
+  width: 48px;
+  margin: 8px 12px 0px 0px;
+}
+.level-point {
+  background-color: #199cdb;
+}
+
+/* CHỨNG CHỈ */
+#certificate .container h1 {
+  margin: 0px;
+}
+.certificate--img {
+  width: 30%;
+  height: auto;
+}
+.certificate--details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+.certificate--details--child {
+  display: flex;
+  gap: 24px;
+  margin: 32px 0px;
+}
+.cert-prf {
+  border-left: 1px solid #d6c08d;
+  padding-left: 12px;
+}
+.cert-dbi {
+  margin: 0px;
+  padding-top: 32px;
+  border-top: 1px solid#d6c08d;
+}
+
+/* DỰ ÁN */
+.project--details {
+  margin-top: 32px;
+
+  display: flex;
+  gap: 24px;
+}
+.project--img {
+  width: 100%;
+  height: auto;
+  display: block; /* che khoảng trắng giữa <img> và <div> kế tiếp */
+}
+.project--name,
+.project--time {
+  padding: 12px 0px 12px 16px;
+  border: 1px solid #f2f2f2;
+  border-bottom: none;
+}
+.project--name {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.project--year {
+  border-radius: 20px; /* Các thuộc tính còn lại được khai báo tại .current */
+}
+.project--icon {
+  padding-left: 8px;
+  font-size: 15px;
+  color: #7a797a;
+}
+table {
+  border-collapse: collapse;
+}
+table td {
+  padding: 8px 2px 8px 4px;
+}
+table td:first-child {
+  width: 85px;
+}
+table tr {
+  border: 1px solid #f2f2f2;
+  vertical-align: top;
+}
+.my-CV table tr:last-child {
+  height: 60px; /* Để chiều cao của <tr> cuối cùng bằng chiều cao của <tr> 2 <table> còn lại */
+}
+
+/* FOOTER */
+.footer-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.footer-list li {
+  display: flex;
+  align-items: center;
+}
+.footer-list li a:link,
+.footer-list li a:visited {
+  color: #6a6a6a;
+  text-decoration: none;
+}
+.footer-list li a:hover,
+.footer-list li a:active {
+  color: #199cdb;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.footer--icon {
+  font-size: 25px;
+}
+/* Nếu dùng display: inline-block thì làm cách nào để đưa các phần tử ra giữa trang và các text nằm giữa các icon? */
+
+/* ẢNH CÁ NHÂN TẠI NAVBAR */
+.nav-bar--img {
+  width: 20%;
+  height: auto;
+  border: 12px solid #fff;
+  border-radius: 50%;
+
+  position: absolute;
+}
